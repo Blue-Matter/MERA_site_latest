@@ -1,0 +1,109 @@
+title = "MERA: Methods Evaluation and Risk Assessment"
+baseURL = "https://www.merafish.org/"
+languageCode = "en-us"
+theme = "airspace-hugo"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+# The site's parameters
+[params]
+  home = "Home"
+  
+  [menu]
+
+   [[menu.header]]
+      weight = 2
+      name = "MERA App"
+      url = "mera_app"
+    [[menu.header]]
+      weight = 3
+      name = "MERA Library"
+      url = "library"
+    [[menu.header]]
+      weight = 4
+      name = "User Manual"
+      url = "https://blue-matter.github.io/openMSE/MERA-User-Guide.html"
+    [[menu.header]]
+      weight = 5
+      name = "Contact"
+      url = "contact"
+      
+    [[menu.footer]]
+      weight = 1
+      name = "About us"
+      url = "#"
+    [[menu.footer]]
+      weight = 2
+      name = "Contact us"
+      url = "contact"
+    [[menu.footer]]
+      weight = 3
+      name = "Help"
+      url = "https://blue-matter.github.io/openMSE/MERA-User-Guide.html"
+  
+
+  [params.slider]
+    enable = true
+    title = "Welcome to MERA"
+    subtitle = "Methods Evaluation and Risk Assessment<br/> "
+    bgImage = "img/boat-reduced-unsplash.jpg"
+    btnText = "Go to MERA App"
+    url = "mera_app"
+
+  [params.wrapper]
+    enable = true
+    image = "img/boat2.jpg"
+    title = "About MERA"
+    italic = "Welcome to MERA, an open-source tool for analyzing risk, guiding fishery improvement projects, and evaluating fishery management strategies for certification."
+    paragraph = "MERA links a simple graphical questionnaire to the powerful openMSE libraries to calculate fish population status and management performance."
+    paragraph11 = "MERA is developed by"
+    link11 = "https://www.bluematterscience.com"
+    link12 = "Blue Matter Science. "
+    paragraph1 = "Development and testing of MERA is supported by the"
+    link1 = "https://www.msc.org"
+    link2 = "Marine Stewardship Council."
+    paragraph1a = "Additional support is gratefully acknowledged from the"
+    link1a = "https://www.nrdc.org/"
+    link2a = "Natural Resources Defense Council."
+    paragraph2 = "The objective of MERA is to bring defensible and transparent management decision making to a wider range of fisheries. The software is designed to supersede existing fishery risk assessment frameworks being of comparable usability but proving theoretically rigorous management evaluation via closed-loop simulation."
+    paragraph3 = "MERA includes more than 30 approaches for estimating population status from varying data types and more than 100 fishery management options."
+
+  [params.blog]
+    enable = false
+    title = "Get The Latest On What We're doing"
+    subtitle = "Catch up with us, anytime and anywhere"
+
+  [params.feature]
+    enable = true
+    title = "Help Material"
+    bgImage = "img/freestocks-org-3BL9hQzRk68-unsplash.jpg"
+    content = "A comprehensive manual for MERA is available [here](https://blue-matter.github.io/openMSE/MERA-User-Guide.html). For for information about the software libraries that made MERA possible check out the openMSE [website](http://www.openMSE.com)."
+  
+
+  [params.call]
+    enable = false
+    bgImage = "img/call-to-action-bg.jpg"
+    title = "MERA is under ongoing development"
+    paragraph = "If you experience a bug or would like to request a feature, please feel free to contact the MERA lead developer: "
+    name1 = "Tom Carruthers"
+    email1 = "tom@bluematterscience.com"
+    [params.call.button]
+      url = "contact"
+      text = "Contact Us"
+
+  [params.contact]
+    enable = true
+    title = "Contact Us"
+    subtitle = ".................."
+    [params.contact.form]
+      name = "Your name"
+      email = "Your email"
+      subject = "Your subject"
+      message = "Your message"
+      button = "Send message"
+    [params.contact.box]
+      title = "Blue Matter Science Ltd"
+      address = "2150 Bridgman Ave, North Vancouver, V7P 2T9, Canada"
+      email = "Email: office@bluematterscience.com"
+      phone = "Phone: +1 604-805-6627"
+   

@@ -1,0 +1,67 @@
+---
+bgImage: img/slider-bg.jpg
+title: MERA Library
+type: single
+---
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+         $(document).ready(function() {
+             $("table").DataTable({
+               "aLengthMenu": [[50, 75, 100, -1], [50, 75, 100, "All"]],
+               "iDisplayLength": 50
+             });
+         } );
+         
+</script>
+
+<style>
+.page {
+  margin-left: 50px;
+  margin-right: 50px;
+  
+  height: 100%;
+}
+
+</style>
+
+
+<div class="page">
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+suppressMessages(library(dplyr))
+suppressMessages(library(knitr))
+suppressMessages(library(kableExtra))
+DF <- readRDS("DF.Rdata")
+
+DF <- DF %>% 
+  mutate('MERA file'=paste0("<a href='", DF$MRfile,"'> Download</a>")) %>% 
+  mutate('Questionnaire Report'=paste0("<a href='", DF$RPfile,"'> Link</a>")) 
+
+ind <- !DF$hasMERA
+if (sum(ind)>0) DF['MERA file'][ind,1] <- ''
+
+ind <- !DF$hasRep
+if (sum(ind)>0) DF['Questionnaire Report'][ind,1] <- ''
+
+
+
+DFout <- DF %>% select(Name, Species, Region, Agency, 'MERA file', 'Questionnaire Report') 
+DFout <- DFout %>% arrange(Name)
+# htmlTable::htmlTable(DFout, css.cell = "padding-left: 1em; padding-right: 1em;", align = "rrrr")
+
+DFout %>% kable("html", escape=F,  table.attr = "class='dtable'", align="llllcccclll") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                full_width = TRUE, position="float_left", font_size = 14) %>%
+  kableExtra::column_spec(1) %>%
+  kableExtra::column_spec(2, italic=TRUE) %>%
+  kableExtra::column_spec(3) %>%
+  kableExtra::column_spec(4) %>%
+  kableExtra::column_spec(5) %>%
+  kableExtra::column_spec(6) 
+
+
+```
+</div>

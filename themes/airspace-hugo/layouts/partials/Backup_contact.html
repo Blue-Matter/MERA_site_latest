@@ -1,0 +1,72 @@
+{{ partial "global-header.html" . }}
+
+<!-- contact form start -->
+{{ with .Site.Params.contact }}
+<section id="contact-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <form name="contact" method="POST" data-netlify="true">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="{{ .form.name }}">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="{{ .form.email }}">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="{{ .form.subject }}">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <form name="contact2" method="POST" data-netlify="true">
+            <div class="form-group-2">
+              <textarea class="form-control" rows="3" placeholder="{{ .form.message }}"></textarea>
+            </div>
+            <button class="btn btn-default" type="submit">{{ .form.button }}</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="contact-box" class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+
+          <h2>{{ .box.title }}</h2>
+          <ul class="address-block">
+            <li>
+              <i class="fa fa-map-marker"></i>{{ .box.address }}
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i>{{ .box.email }}
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>{{ .box.phone }}
+            </li>
+          </ul>
+          <ul class="social-icons">
+          {{ range .social }}  
+            <li>
+              <a href="{{ .url }}"><i class="fa {{ .icon }}"></i></a>
+            </li>
+          {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        {{ with .gmaps}}
+        <div class="block">
+          <h2>{{ .title }}</h2>
+            <div class="google-map">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10414.674457810812!2d-123.2509856!3d49.2637267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa65f924a3fe093a!2sInstitute+for+the+Oceans+and+Fisheries!5e0!3m2!1sen!2sca!4v1561507373737!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

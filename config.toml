@@ -1,5 +1,5 @@
 title = "MERA: Methods Evaluation and Risk Assessment"
-baseURL = "https://www.merafish.org/"
+baseURL = "https://mera2.netlify.app/"
 languageCode = "en-us"
 theme = "airspace-hugo"
 

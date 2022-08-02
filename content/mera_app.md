@@ -1,9 +1,10 @@
 ---
 bgImage: img/boat-reduced-unsplash.jpg
-title: MERA App
+title: MERA for Users
 type: single
 ---
- 
+
+
 The MERA App has been moved to a new server and now requires a user account for access.
 
 No personal data is collected other than your username and email.
@@ -14,7 +15,9 @@ Click [here](https://mera.merafish.org) to sign in and use MERA.
 
 Please [Contact Us](/contact) if you have any problems accessing the app or questions about the sign-up process. 
 
-
+ 
+#### Disclaimer:
+*This work is provided on a strictly as-is basis only, and no part of this work may be reproduced, stored or transmitted, in any form or by any means including photocopying and recording, except as expressly permitted under the aforementioned terms*
 
 
 	
